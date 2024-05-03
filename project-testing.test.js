@@ -1,5 +1,6 @@
 const source = require('./project-testing');
 
+// capitalize()
 test('Capitalize 1', ()=> {
   expect(source.capitalize('hello world!')).toBe('Hello world!');
 });
@@ -15,3 +16,14 @@ test('Capitalize empty string', ()=> {
 test('Capitalize one character string', ()=> {
   expect(source.capitalize('a')).toBe('A');
 });
+
+
+// reverse()
+test('Reverse 1', () => {
+  expect(source.reverse('Racecar')).toBe('racecaR');
+});
+
+test('Reverse 2', () => {
+  expect(source.reverse('hello world')).toBe('dlrow olleh');
+});
+
