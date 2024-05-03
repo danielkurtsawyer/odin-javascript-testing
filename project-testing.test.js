@@ -54,3 +54,20 @@ test('Multiplying', () => {
 test('Multiplying by zero', () => {
   expect(source.calculator.multiply(10, 0)).toBe(0);
 })
+
+// CaesarCipher
+test('caesarCipher', () => {
+  expect(source.caesarCipher('hello world', 1)).toBe('ifmmp xpsme');
+});
+
+test('caesarCipher wrapping from z to a', () => {
+  expect(source.caesarCipher('xyz', 3)).toBe('abc');
+});
+
+test('caesarCipher keeping case', () => {
+  expect(source.caesarCipher('xYz', 3)).toBe('aBc');
+});
+
+test('caesarCipher punctuation', () => {
+  expect(source.caesarCipher('Hello, my name is Bob!', 15)).toBe('Wtaad, bn cpbt xh Qdq!');
+})
