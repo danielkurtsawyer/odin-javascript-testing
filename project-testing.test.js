@@ -1,5 +1,5 @@
 const source = require('./project-testing');
 
-test('module exists', ()=> {
-  expect(source).toBeDefined();
+test('Capitalize', ()=> {
+  expect(source.capitalize('hello world!')).toBe('Hello world!');
 });
