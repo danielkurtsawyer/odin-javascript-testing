@@ -71,3 +71,13 @@ test('caesarCipher keeping case', () => {
 test('caesarCipher punctuation', () => {
   expect(source.caesarCipher('Hello, my name is Bob!', 15)).toBe('Wtaad, bn cpbt xh Qdq!');
 })
+
+// analyzeArray
+test('analyzeArray', () => {
+  expect(source.analyzeArray([1, 8, 3, 4, 2, 6])).toEqual(
+    {average: 4,
+      min: 1,
+      max: 8,
+      length: 6
+    })
+})

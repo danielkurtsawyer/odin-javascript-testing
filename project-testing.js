@@ -48,4 +48,17 @@ const caesarCipher = (string, shiftFactor) => {
   return encryptedString;
 }
 
-module.exports = {capitalize, reverse, calculator, caesarCipher};
+const analyzeArray = (array) => {
+  const length = array.length;
+  const average = array.reduce((total, num) => total + num, 0)/length;
+  const min = Math.min(...array);
+  const max = Math.max(...array);
+  return {
+    average,
+    min,
+    max,
+    length
+  };
+}
+
+module.exports = {capitalize, reverse, calculator, caesarCipher, analyzeArray};
